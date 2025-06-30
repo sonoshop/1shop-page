@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erba Logica 品牌介紹</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Serif TC', serif;
+      background-color: auto;
+      letter-spacing: 0.3em
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      vertical-align: bottom;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      background-image: url("https://cdn.jsdelivr.net/gh/sonoshop/shop-img@main/ERBA_BANNER.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .banner .logo {
+      position: absolute;
+      top: 15%;
+      left: 73%;
+      transform: translateX(-50%);
+      width: 450px;
+      height: auto;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in-out forwards;
+      animation-delay: 0.2s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fade-in-img,
+    .fade-in-text,
+    .fade-in-question {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+      will-change: opacity, transform;
+    }
+
+    .fade-in-img.visible,
+    .fade-in-text.visible,
+    .fade-in-question.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .intro-block {
+      background-color: #031d06;
+      color: #ffffff;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 20px;
+      line-height: 1.6;
+      letter-spacing: 0.3em;
+    }
+
+    .faq-section {
+      background-color: #630101;
+      color: #ffffff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .accordion {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #ffffff55;
+      padding: 15px 0;
+    }
+
+    .accordion-question {
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      color: inherit;
+      width: 100%;
+      text-align: left;
+      padding: 0;
+    }
+
+    .accordion-icon {
+      font-size: 22px;
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-answer {
+      font-size: 16px;
+      line-height: 1.8;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+      margin-top: 10px;
+      background-color: #4a0000;
+      padding: 10px 15px;
+    }
+
+    .accordion-answer.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .accordion-question.open .accordion-icon {
+      transform: rotate(45deg);
+    }
+
+    .mobile-break {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        height: 250px;
+      }
+
+      .banner .logo {
+        width: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .intro-block {
+        font-size: 16px;
+        padding: 30px 15px;
+      }
+
+      .mobile-break {
+        display: inline;
+      }
+
+      .accordion-question {
+        font-size: 18px;
+      }
+
+      .accordion-answer {
+        font-size: 15px;
+      }
+
+      .accordion-icon {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <img
+      class="logo"
+      src="https://cdn.jsdelivr.net/gh/sonoshop/shop-img@main/ERBA_LOGO.png"
+      alt="ERBA Logo"
+    />
+  </div>
+
+  <div class="intro-block">
+    <div class="fade-in-text">
+      義大利自然農法草本品牌<br />
+    「用香草療癒生活，<span class="mobile-break"><br></span>讓自然走進日常。」
+    </div>
+  </div>
+
+  <img
+    src="https://cdn.jsdelivr.net/gh/sonoshop/shop-img@main/ERBA_HERB1.png"
+    alt="ERBA Image 1"
+    class="fade-in-img"
+  />
+
+  <div class="intro-block">
+    <div class="fade-in-text">
+      Erba Logica 創立於義大利 Umbria 地區，<br />
+    承襲古老草本知識與有機農法。<br />
+    品牌名稱意為「邏輯之草」，象徵自然與理性的共生。<br />
+    自然的力量才是生活最溫柔的療癒。
+    </div>
+  </div>
+
+  <img
+    src="https://cdn.jsdelivr.net/gh/sonoshop/shop-img@main/ERBA_HERB2.png"
+    alt="ERBA Image 2"
+    class="fade-in-img"
+  />
+
+  <div class="faq-section">
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-question fade-in-question">
+          Q：<span class="mobile-break"><br></span>Erba Logica 的花草茶有哪些原料？
+          <span class="accordion-icon">＋</span>
+        </div>
+        <div class="accordion-answer">
+          <br>A：<span class="mobile-break"><br></span>Erba Logica 引進的茶款皆採用<span class="mobile-break"><br></span>義大利有機農場種植的香草，<br>常見成分包含迷迭香、香蜂草、洋甘菊等，無咖啡因、無人工香料。<br><br>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-question fade-in-question">
+          Q：<span class="mobile-break"><br></span>這些花草茶有特別的飲用建議嗎？
+          <span class="accordion-icon">＋</span>
+        </div>
+        <div class="accordion-answer">
+         <br> A：<span class="mobile-break"><br></span>建議使用約 95°C 熱水沖泡 5～7 分鐘。<br>適合午後放鬆、睡前舒壓，或搭配閱讀、<span class="mobile-break"><br></span>泡澡時間飲用。<br><br>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-question fade-in-question">
+          Q：孕婦可以喝嗎？
+          <span class="accordion-icon">＋</span>
+        </div>
+        <div class="accordion-answer">
+          <br>A：<span class="mobile-break"><br></span>Erba Logica 的花草茶使用天然植物，<span class="mobile-break"><br></span>但體質與需求因人而異，<br>建議孕婦飲用前可諮詢專業醫師。<br><br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible');
+          }
+        });
+      }, {
+        threshold: 0.3
+      });
+
+      document.querySelectorAll('.fade-in-img, .fade-in-text, .fade-in-question').forEach(el => {
+        observer.observe(el);
+      });
+
+      document.querySelectorAll('.accordion-question').forEach(question => {
+        question.addEventListener('click', () => {
+          const answer = question.nextElementSibling;
+          const icon = question.querySelector('.accordion-icon');
+
+          answer.classList.toggle('open');
+          question.classList.toggle('open');
+
+          icon.textContent = answer.classList.contains('open') ? '－' : '＋';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
