@@ -8,22 +8,24 @@
     * {
       box-sizing: border-box;
     }
-
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
       font-family: sans-serif;
-      background-color: #f5f5f5;
+      background-color: transparent;  
+      overflow: hidden;               
+      height: 100%;
     }
-
     .contact-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 40px 20px;
       gap: 30px;
+      background-color: transparent; 
+      height: 100%;
+      box-sizing: border-box;
     }
-
     .intro-block {
       background-color: #031d06;
       color: #ffffff;
@@ -33,45 +35,37 @@
       max-width: 600px;
       width: 100%;
     }
-
     .intro-content {
       display: flex;
       align-items: center;
       gap: 20px;
       flex-wrap: wrap;
     }
-
     .intro-logo {
       flex: 0 0 100px;
     }
-
     .intro-logo img {
       width: 100%;
       height: auto;
     }
-
     .intro-text {
       flex: 1;
       line-height: 1.6;
     }
-
     .intro-text h2 {
       font-size: 24px;
       margin-bottom: 8px;
       color: #ffffff;
     }
-
     .intro-text p {
       font-size: 16px;
       margin: 4px 0;
       color: #ffffff;
     }
-
     .intro-text a {
       color: #ffffff;
       text-decoration: underline;
     }
-
     .map-block {
       position: relative;
       width: 100%;
@@ -82,7 +76,6 @@
       overflow: hidden;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
-
     .map-block iframe {
       position: absolute;
       top: 0; left: 0;
@@ -90,7 +83,6 @@
       height: 100%;
       border: 0;
     }
-
     @media (max-width: 480px) {
       .intro-content {
         flex-direction: column;
