@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>contactus</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+
+    .intro-block {
+      background-color: #031d06;
+      color: #ffffff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .intro-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .intro-logo {
+      flex: 0 0 100px;
+    }
+
+    .intro-logo img {
+      width: 100%;
+      height: auto;
+    }
+
+    .intro-text {
+      flex: 1;
+      line-height: 1.6;
+    }
+
+    .intro-text h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .intro-text p {
+      font-size: 16px;
+      margin: 4px 0;
+      color: #ffffff;
+    }
+
+    .intro-text a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .map-block {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      padding-bottom: 75%;
+      height: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .map-block iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 480px) {
+      .intro-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .intro-text h2 {
+        font-size: 20px;
+      }
+      .intro-text p {
+        font-size: 14px;
+      }
+      .intro-logo {
+        flex: 0 0 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-wrapper">
+    <div class="intro-block">
+      <div class="intro-content">
+        <div class="intro-logo">
+          <img src="https://img.1shop.tw/Y9x13PnZW0dXn730eJmB75bp/Kyg9vWx8NyKKVnDr3GJP14Zm/original-2.png.avif" alt="公司LOGO" />
+        </div>
+        <div class="intro-text">
+          <h2>聯絡資訊：</h2>
+          <p>昇宇貿易有限公司</p>
+          <p>統一編號：90316085</p>
+          <p>Email: <a href="mailto:sonoinitalia.shop@gmail.com">sonoinitalia.shop@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-block">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.981661151346!2d121.29433189999999!3d25.0007391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681f0c7994d20f%3A0x7d1f1b0f75a1d9ce!2zU29ubyBpbiBJdGFseSDmiJHlnKjnvqnlpKfliKk!5e0!3m2!1szh-TW!2stw!4v1747371648887!5m2!1szh-TW!2stw"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+
+</body>
+</html>
